@@ -17,7 +17,6 @@ export const setDefaultForm = () => {
 export const setUpdateForm = (id, contactList) => {
   return async (dispatch) => {
     const data = contactList.find((item) => item.id == id);
-    delete data.id;
     dispatch({
       type: SET_UPDATE_FORM,
       payload: data,
@@ -82,6 +81,7 @@ export const postContact = (payload) => {
 export const putContact = (id, payload) => {
   return async (dispatch) => {
     console.log('put', id, payload);
+    delete payload.id;
     dispatch(setFetching(true));
     await fetch('https://simple-contact-crud.herokuapp.com/contact/' + id, {
       method: 'PUT',

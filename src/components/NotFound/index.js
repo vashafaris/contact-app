@@ -18,7 +18,7 @@ const NotFound = ({onPress}) => {
         onPress={onPress}
         style={{borderRadius: 4, marginTop: 12, paddingHorizontal: 24}}
         color="yellow">
-        Or i might be wrong, refresh here
+        Or it might be wrong, refresh here
       </ButtonComponent>
     </View>
   );

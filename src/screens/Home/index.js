@@ -142,7 +142,10 @@ const HomeScreen = () => {
         isFetching={isFetching}
         form={form}
         setForm={inputHandler}
-        onCancel={() => setDefault(setUpdateId)}
+        onCancel={() => {
+          setDefault(setUpdateId);
+          setDefaultStore();
+        }}
         onConfirm={updateHandler}
       />
       <DeleteModal
