@@ -1,2 +1,6 @@
 export const GET_CONTACT_LIST = 'GET_CONTACT_LIST';
 export const SET_FETCHING = 'SET_FETCHING';
+export const SET_DEFAULT_FORM = 'SET_DEFAULT_FORM';
+export const SET_FORM = 'SET_FORM';
+export const SET_UPDATE_FORM = 'SET_UPDATE_FORM';
+export const DELETE_CONTACT = 'DELETE_CONTACT';

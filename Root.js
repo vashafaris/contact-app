@@ -10,7 +10,7 @@ const Root = () => {
   const store = configureStore();
 
   return (
-    <SafeAreaView style={{flex: 1}}>
+    <SafeAreaView style={{flex: 1, backgroundColor: 'white'}}>
       <Provider store={store}>
         <NavigationContainer>
           <Navigation />

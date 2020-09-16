@@ -1,31 +1,41 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import {View, StyleSheet, Text, Image} from 'react-native';
 import Icon from '../Icon';
 import TextComponent from '../Text';
 
-const Card = ({photo, firstName, lastName, age}) => {
+const Card = ({photo, firstName, lastName, age, onDelete, onUpdate}) => {
+  const imageRef = useRef(null);
   return (
     <View style={styles.container}>
       <Image
-        source={{
-          uri: photo,
-        }}
+        ref={imageRef}
         style={styles.image}
+        defaultSource={require('../../assets/icons/default-photo.png')}
+        source={
+          photo != 'N/A'
+            ? {
+                uri: photo,
+              }
+            : require('../../assets/icons/default-photo.png')
+        }
       />
       <View style={styles.infoContainer}>
         <View style={styles.profileContainer}>
-          <TextComponent fontWeight="bold">
+          <TextComponent style={{color: 'grey'}}>
+            Born {2020 - age}{' '}
+            <TextComponent fontWeight="bold">({age})</TextComponent>
+          </TextComponent>
+          <TextComponent fontWeight="bold" style={{fontSize: 16}}>
             {`${firstName} ${lastName}`}
           </TextComponent>
-          <TextComponent>Age: 23</TextComponent>
         </View>
         <View style={styles.iconContainer}>
           <Icon
-            onPress={() => alert('ok')}
+            onPress={onDelete}
             source={require('../../assets/icons/bin.png')}
           />
           <Icon
-            onPress={() => alert('ok')}
+            onPress={onUpdate}
             source={require('../../assets/icons/edit.png')}
           />
         </View>
@@ -40,16 +50,16 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     width: '90%',
     borderRadius: 8,
-    marginVertical: 8,
+    marginVertical: 4,
     padding: 12,
-    elevation: 5,
+    elevation: 4,
   },
   infoContainer: {
-    marginLeft: 12,
+    marginLeft: 24,
     flex: 1,
   },
   profileContainer: {
-    flex: 0,
+    flex: 1,
     marginTop: 4,
   },
   iconContainer: {
@@ -59,9 +69,9 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
   },
   image: {
-    height: 100,
-    width: 100,
-    borderRadius: 12,
+    height: 88,
+    width: 88,
+    borderRadius: 100,
   },
 });
 

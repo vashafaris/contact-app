@@ -13,8 +13,8 @@ const Icons = ({source, onPress, style, ...props}) => {
 
 const styles = StyleSheet.create({
   icon: {
-    width: 28,
-    height: 28,
+    width: 24,
+    height: 24,
     marginHorizontal: 8,
   },
 });
