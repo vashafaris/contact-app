@@ -53,7 +53,13 @@ export const getContactList = () => {
           payload: res.data,
         });
       })
-      .catch((e) => console.log(e));
+      .catch((e) => {
+        alert(e);
+        dispatch({
+          type: GET_CONTACT_LIST,
+          payload: [],
+        });
+      });
   };
 };
 
@@ -74,7 +80,7 @@ export const postContact = (payload) => {
         alert(res.message);
         dispatch(getContactList());
       })
-      .catch((e) => console.log(e));
+      .catch((e) => alert(e));
   };
 };
 
@@ -96,7 +102,7 @@ export const putContact = (id, payload) => {
         alert(res.message);
         dispatch(getContactList());
       })
-      .catch((e) => console.log(e));
+      .catch((e) => alert(e));
   };
 };
 
@@ -115,8 +121,7 @@ export const deleteContact = (id) => {
         dispatch(getContactList());
       })
       .catch((e) => {
-        alert('gagal');
-        console.log(e);
+        alert(e);
       });
   };
 };
