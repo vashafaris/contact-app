@@ -5,7 +5,7 @@ import TextComponent from '../Text';
 
 const NotFound = ({onPress}) => {
   return (
-    <View style={styles.container}>
+    <View data-test="component-notfound" style={styles.container}>
       <Image
         style={styles.image}
         source={require('../../assets/icons/lonely.png')}

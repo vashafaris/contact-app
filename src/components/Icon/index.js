@@ -4,6 +4,7 @@ import {Image, TouchableOpacity, StyleSheet} from 'react-native';
 const Icons = ({source, onPress, style, ...props}) => {
   return (
     <TouchableOpacity
+      data-test="component-icon"
       onPress={onPress}
       hitSlop={{top: 8, bottom: 8, left: 8, right: 8}}>
       <Image {...props} source={source} style={[styles.icon, style]} />

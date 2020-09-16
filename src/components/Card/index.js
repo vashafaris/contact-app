@@ -6,7 +6,7 @@ import TextComponent from '../Text';
 const Card = ({photo, firstName, lastName, age, onDelete, onUpdate}) => {
   const imageRef = useRef(null);
   return (
-    <View style={styles.container}>
+    <View data-test="component-card" style={styles.container}>
       <Image
         ref={imageRef}
         style={styles.image}

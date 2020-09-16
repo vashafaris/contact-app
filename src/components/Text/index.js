@@ -13,7 +13,10 @@ const TextComponent = ({children, style, fontWeight, ...props}) => {
   }
 
   return (
-    <Text {...props} style={[{fontFamily: fontFamily}, style]}>
+    <Text
+      data-test="component-text"
+      {...props}
+      style={[{fontFamily: fontFamily}, style]}>
       {children}
     </Text>
   );

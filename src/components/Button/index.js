@@ -49,6 +49,7 @@ const ButtonComponent = ({onPress, children, type, color, style}) => {
 
   return (
     <TouchableOpacity
+      data-test="component-button"
       style={[styles(colorStyle).default, styleType.button, style]}
       onPress={onPress}>
       <TextComponent style={styleType.text}>{children}</TextComponent>

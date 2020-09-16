@@ -1,15 +1,10 @@
 import React from 'react';
-import {Image, StyleSheet, View, ActivityIndicator} from 'react-native';
+import {StyleSheet, View, ActivityIndicator} from 'react-native';
 import TextComponent from '../Text';
 
 const Waiting = () => {
   return (
-    <View style={styles.container}>
-      {/* <Image
-        style={styles.image}
-        source={require('../../assets/icons/stopwatch.png')}
-      /> */}
-
+    <View data-test="component-waiting" style={styles.container}>
       <ActivityIndicator
         size="large"
         color={'black'}

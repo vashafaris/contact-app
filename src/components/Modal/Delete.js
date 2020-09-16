@@ -4,7 +4,6 @@ import Modal from 'react-native-modal';
 import ButtonComponent from '../Button';
 
 import TextComponent from '../Text';
-import TextInputComponent from '../TextInput';
 
 const DeleteModal = ({isVisible, isFetching, onCancel, onConfirm}) => {
   return (
