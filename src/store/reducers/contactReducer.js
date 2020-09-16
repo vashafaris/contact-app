@@ -22,7 +22,7 @@ const contactReducer = (state = initialState, action) => {
   const {type, payload} = action;
   switch (type) {
     case GET_CONTACT_LIST:
-      return {...state, contactList: payload, isFetching: false};
+      return {...state, contactList: [], isFetching: false};
     case SET_FETCHING:
       return {
         ...state,
