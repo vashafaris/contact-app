@@ -1,11 +1,4 @@
 This is a react native project about contact app, my focus is building this app on android.
-
-![](src/assets/screenshots/notfound.png)
-![](src/assets/screenshots/home.png)
-![](src/assets/screenshots/create.png)
-![](src/assets/screenshots/update.png)
-![](src/assets/screenshots/delete.png)
-
 ## Getting Started
 
 First, run:
@@ -22,3 +15,11 @@ npm run android
 # or
 yarn android
 ```
+
+![](src/assets/screenshots/notfound.png)
+![](src/assets/screenshots/home.png)
+![](src/assets/screenshots/create.png)
+![](src/assets/screenshots/update.png)
+![](src/assets/screenshots/delete.png)
+
+
